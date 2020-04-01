@@ -33,11 +33,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.PartidasGanadas = new System.Windows.Forms.RadioButton();
-            this.TiempoJugado = new System.Windows.Forms.RadioButton();
-            this.label3 = new System.Windows.Forms.Label();
+            this.crearCuenta = new System.Windows.Forms.RadioButton();
+            this.iniciarSesion = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.passwordBox = new System.Windows.Forms.TextBox();
-            this.PartidasJugadas = new System.Windows.Forms.RadioButton();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -46,7 +45,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 25);
+            this.label2.Location = new System.Drawing.Point(6, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 25);
             this.label2.TabIndex = 1;
@@ -54,7 +53,7 @@
             // 
             // nombre
             // 
-            this.nombre.Location = new System.Drawing.Point(116, 31);
+            this.nombre.Location = new System.Drawing.Point(135, 31);
             this.nombre.Name = "nombre";
             this.nombre.Size = new System.Drawing.Size(164, 20);
             this.nombre.TabIndex = 3;
@@ -62,19 +61,20 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(527, 12);
+            this.button1.Location = new System.Drawing.Point(99, 165);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(149, 31);
             this.button1.TabIndex = 4;
-            this.button1.Text = "conectar";
+            this.button1.Text = "Conectar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(126, 157);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.button2.Location = new System.Drawing.Point(99, 213);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(149, 31);
             this.button2.TabIndex = 5;
             this.button2.Text = "Enviar";
             this.button2.UseVisualStyleBackColor = true;
@@ -83,13 +83,14 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.groupBox1.Controls.Add(this.PartidasGanadas);
-            this.groupBox1.Controls.Add(this.TiempoJugado);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.passwordBox);
-            this.groupBox1.Controls.Add(this.PartidasJugadas);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.crearCuenta);
+            this.groupBox1.Controls.Add(this.iniciarSesion);
             this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.passwordBox);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.nombre);
             this.groupBox1.Location = new System.Drawing.Point(23, 12);
             this.groupBox1.Name = "groupBox1";
@@ -98,61 +99,51 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Peticion";
             // 
-            // PartidasGanadas
+            // crearCuenta
             // 
-            this.PartidasGanadas.AutoSize = true;
-            this.PartidasGanadas.Location = new System.Drawing.Point(116, 91);
-            this.PartidasGanadas.Name = "PartidasGanadas";
-            this.PartidasGanadas.Size = new System.Drawing.Size(187, 17);
-            this.PartidasGanadas.TabIndex = 7;
-            this.PartidasGanadas.TabStop = true;
-            this.PartidasGanadas.Text = "Dime cuantas partidas he ganado ";
-            this.PartidasGanadas.UseVisualStyleBackColor = true;
+            this.crearCuenta.AutoSize = true;
+            this.crearCuenta.Location = new System.Drawing.Point(116, 126);
+            this.crearCuenta.Name = "crearCuenta";
+            this.crearCuenta.Size = new System.Drawing.Size(89, 17);
+            this.crearCuenta.TabIndex = 12;
+            this.crearCuenta.TabStop = true;
+            this.crearCuenta.Text = "Crear cuenta ";
+            this.crearCuenta.UseVisualStyleBackColor = true;
             // 
-            // TiempoJugado
+            // iniciarSesion
             // 
-            this.TiempoJugado.AutoSize = true;
-            this.TiempoJugado.Location = new System.Drawing.Point(116, 119);
-            this.TiempoJugado.Name = "TiempoJugado";
-            this.TiempoJugado.Size = new System.Drawing.Size(169, 17);
-            this.TiempoJugado.TabIndex = 7;
-            this.TiempoJugado.TabStop = true;
-            this.TiempoJugado.Text = "Dime cuanto tiempo he jugado";
-            this.TiempoJugado.UseVisualStyleBackColor = true;
+            this.iniciarSesion.AutoSize = true;
+            this.iniciarSesion.Location = new System.Drawing.Point(116, 103);
+            this.iniciarSesion.Name = "iniciarSesion";
+            this.iniciarSesion.Size = new System.Drawing.Size(86, 17);
+            this.iniciarSesion.TabIndex = 11;
+            this.iniciarSesion.TabStop = true;
+            this.iniciarSesion.Text = "Iniciar sesión";
+            this.iniciarSesion.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 91);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Altura";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 25);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Contraseña";
             // 
             // passwordBox
             // 
-            this.passwordBox.Location = new System.Drawing.Point(15, 110);
+            this.passwordBox.Location = new System.Drawing.Point(135, 68);
             this.passwordBox.Name = "passwordBox";
-            this.passwordBox.Size = new System.Drawing.Size(62, 20);
+            this.passwordBox.Size = new System.Drawing.Size(164, 20);
             this.passwordBox.TabIndex = 9;
-            // 
-            // PartidasJugadas
-            // 
-            this.PartidasJugadas.AutoSize = true;
-            this.PartidasJugadas.Location = new System.Drawing.Point(116, 68);
-            this.PartidasJugadas.Name = "PartidasJugadas";
-            this.PartidasJugadas.Size = new System.Drawing.Size(180, 17);
-            this.PartidasJugadas.TabIndex = 8;
-            this.PartidasJugadas.TabStop = true;
-            this.PartidasJugadas.Text = "Dime cuantas partidas he jugado";
-            this.PartidasJugadas.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(25, 332);
+            this.button3.Location = new System.Drawing.Point(101, 257);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(147, 53);
+            this.button3.Size = new System.Drawing.Size(147, 31);
             this.button3.TabIndex = 10;
             this.button3.Text = "desconectar";
             this.button3.UseVisualStyleBackColor = true;
@@ -163,9 +154,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 562);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -182,12 +171,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton PartidasGanadas;
-        private System.Windows.Forms.RadioButton PartidasJugadas;
-        private System.Windows.Forms.RadioButton TiempoJugado;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox passwordBox;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.RadioButton crearCuenta;
+        private System.Windows.Forms.RadioButton iniciarSesion;
+        private System.Windows.Forms.Label label1;
     }
 }
 
